@@ -1,0 +1,6 @@
+vendor/
+.env
+.env.local
+.git/
+.gitignore
+node_modules/
