@@ -10,6 +10,6 @@ if ($descricao && $id) {
   $sql->bindValue(':id', $id, PDO::PARAM_INT);
   $sql->execute();
 
-  header('Location: ../index.php');
+  header('Location: ../api/index.php');
   exit;
 }

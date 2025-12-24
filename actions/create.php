@@ -8,6 +8,6 @@ if ($descricao) {
   $sql->bindValue(':descricao', $descricao);
   $sql->execute();
 
-  header('Location: ../index.php');
+  header('Location: ../api/index.php');
   exit;
 }
