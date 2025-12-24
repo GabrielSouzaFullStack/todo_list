@@ -2,9 +2,13 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createUnsafeImmutable(__DIR__ . '/..');
-$dotenv->load();
+// Só carrega o .env se o arquivo existir (desenvolvimento local)
+if (file_exists(__DIR__ . '/../.env')) {
+  $dotenv = Dotenv\Dotenv::createUnsafeImmutable(__DIR__ . '/..');
+  $dotenv->load();
+}
 
+// Pega as variáveis (do .env local ou da Railway)
 $hostname = getenv('HOSTNAME');
 $data_base = getenv('DATA_BASE');
 $user = getenv('USER_DB');
