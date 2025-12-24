@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__ . '/../database/conexao.php');
+require_once(__DIR__ . '/../api/database/conexao.php');
 $descricao = filter_input(INPUT_POST, 'description');
 $id = filter_input(INPUT_POST, 'id');
 
