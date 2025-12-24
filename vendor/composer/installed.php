@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'marac/projeto-todo-list',
-        'pretty_version' => 'dev-master',
-        'version' => 'dev-master',
-        'reference' => 'd9ec091efa0903f7ef2b5128222978f0b805dab1',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'db468bad861a543b5508de88427745dc060a506e',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -20,9 +20,9 @@
             'dev_requirement' => false,
         ),
         'marac/projeto-todo-list' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
-            'reference' => 'd9ec091efa0903f7ef2b5128222978f0b805dab1',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'db468bad861a543b5508de88427745dc060a506e',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
