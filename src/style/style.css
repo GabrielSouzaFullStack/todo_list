@@ -1,0 +1,187 @@
+/* Fonte utilizada */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* Cores principais */
+  --roxo-principal: #8b5cf6;
+  --roxo-escuro: #7c3aed;
+  --roxo-claro: #a78bfa;
+
+  /* Cores de fundo */
+  --fundo-escuro: #1f1b24;
+  --fundo-card: #2d2435;
+  --fundo-card-hover: #3a2f47;
+
+  /* Cores de acento */
+  --rosa-destaque: #ec4899;
+  --azul-destaque: #6366f1;
+  --verde-destaque: #10b981;
+
+  /* Cores de texto */
+  --texto-principal: #f3f4f6;
+  --texto-secundario: #d1d5db;
+  --texto-suave: #9ca3af;
+
+  /* Cores de estado */
+  --sucesso: #10b981;
+  --alerta: #f59e0b;
+  --erro: #ef4444;
+
+  /* Sombras */
+  --sombra-pequena: 0 2px 4px rgba(139, 92, 246, 0.1);
+  --sombra-media: 0 4px 8px rgba(139, 92, 246, 0.2);
+  --sombra-grande: 0 8px 16px rgba(139, 92, 246, 0.3);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("../images/background-todo-list.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#todo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--fundo-escuro);
+  padding: 18px;
+  border-radius: 8px;
+  width: 430px;
+  box-shadow: var(--sombra-grande);
+}
+
+#todo h1 {
+  color: var(--texto-principal);
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  #todo {
+    width: 400px;
+  }
+}
+
+.to-do-form {
+  display: flex;
+  width: 100%;
+}
+
+.to-do-form input {
+  background-color: transparent;
+  color: var(--texto-principal);
+  border: none;
+  font-size: 16px;
+  width: 100%;
+  padding: 4px;
+  border-bottom: 1px solid var(--roxo-claro);
+}
+
+.to-do-form input:focus-visible {
+  outline: none;
+}
+
+.to-do-form .form-button {
+  border: none;
+  min-height: 40px;
+  min-width: 40px;
+  background-color: var(--roxo-principal);
+  border-radius: 100%;
+  font-size: 20px;
+  transition: scale 0.5s ease;
+  box-shadow: var(--sombra-media);
+}
+
+.to-do-form .form-button.confirm-button {
+  display: flex;
+  justify-content: center;
+}
+
+.to-do-form .form-button:hover {
+  cursor: pointer;
+  scale: 1.05;
+  background-color: var(--roxo-escuro);
+}
+
+#tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 400px;
+  overflow: auto;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--texto-principal);
+  background-color: var(--fundo-card);
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  box-shadow: var(--sombra-pequena);
+}
+
+.task:hover {
+  background-color: var(--fundo-card-hover);
+}
+
+.task .progress {
+  margin-right: 10px;
+}
+
+.task .progress.done + .task-description {
+  text-decoration: line-through;
+  color: var(--texto-suave);
+}
+
+.task .task-description {
+  font-size: 16px;
+  color: var(--texto-principal);
+  padding: 4px 0px;
+  width: 100%;
+}
+
+.task .task-actions {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: end;
+}
+
+.action-button {
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.action-button:hover {
+  transform: scale(1.1);
+}
+
+.action-button.edit-button {
+  color: var(--azul-destaque);
+}
+
+.action-button.delete-button {
+  color: var(--erro);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.edit-task .fa-check {
+  line-height: 1.5 !important;
+}

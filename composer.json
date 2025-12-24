@@ -1,0 +1,17 @@
+{
+    "name": "marac/projeto-todo-list",
+    "autoload": {
+        "psr-4": {
+            "Marac\\ProjetoTodoList\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "GabrielSouzaFullStack",
+            "email": "gabrieldesouza@cesurg.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
