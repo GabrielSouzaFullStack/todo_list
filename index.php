@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . '../database/conexao.php');
+require_once(__DIR__ . '/database/conexao.php');
 $tasks = [];
 $sql = $pdo->query("select * from task order by id asc");
 
