@@ -19,7 +19,7 @@ $(document).ready(function () {
     const id = $(this).data('task-id');
     const verificado = $(this).is(':checked') ? 'true' : 'false';
     $.ajax({
-      url: '../../actions/update-progress.php',
+      url: 'controllers/TaskController.php?action=atualizar-progresso',
       method: 'POST',
       data: {
         id: id,

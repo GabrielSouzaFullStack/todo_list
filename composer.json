@@ -1,8 +1,8 @@
 {
-    "name": "marac/projeto-todo-list",
+    "name": "/projeto-todo-list",
     "autoload": {
         "psr-4": {
-            "Marac\\ProjetoTodoList\\": "src/"
+            "\\ProjetoTodoList\\": "src/"
         }
     },
     "authors": [

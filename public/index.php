@@ -1,11 +1,9 @@
 <?php
-require_once(__DIR__ . '/database/conexao.php');
-$tasks = [];
-$sql = $pdo->query("select * from task order by id asc");
+require_once(__DIR__ . '/../config/conexao.php');
+require_once(__DIR__ . '/../controllers/TaskController.php');
 
-if ($sql->rowCount() > 0) {
-  $tasks = $sql->fetchAll(PDO::FETCH_ASSOC);
-}
+$taskController = new TaskController($pdo);
+$tasks = $taskController->obterTarefas();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +13,7 @@ if ($sql->rowCount() > 0) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To-Do-List</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="src/style/style.css">
+  <link rel="stylesheet" href="/src/style/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
@@ -23,7 +21,7 @@ if ($sql->rowCount() > 0) {
   <div id="todo">
     <h1>Todo List</h1>
 
-    <form action="actions/create.php" method="POST" class="to-do-form">
+    <form action="controllers/TaskController.php?action=criar-tarefa" method="POST" class="to-do-form">
       <input type="text" name="description" placeholder="Digite sua tarefa aqui" required>
       <button type="submit" class="form-button">
         <i class="fa-solid fa-plus"></i>
@@ -44,10 +42,10 @@ if ($sql->rowCount() > 0) {
             <a class="action-button edit-button">
               <i class="fa-regular fa-pen-to-square"></i>
             </a>
-            <a href="actions/delete.php?id=<?= $task['id'] ?>" class="action-button delete-button">
+            <a href="controllers/TaskController.php?action=deletar-tarefa&id=<?= $task['id'] ?>" class="action-button delete-button">
               <i class="fa-solid fa-trash"></i>
             </a>
-            <form action="actions/update.php" method="POST" class="to-do-form edit-task hidden">
+            <form action="controllers/TaskController.php?action=atualizar-tarefa" method="POST" class="to-do-form edit-task hidden">
               <input type="hidden" name="id" value="<?= $task['id'] ?>">
               <input type="text" name="description" placeholder="Edite sua tarefa aqui" value="<?= $task['descricao'] ?>">
               <button type="submit" class="form-button confirm-button">
@@ -61,7 +59,7 @@ if ($sql->rowCount() > 0) {
     </div>
   </div>
 
-  <script src="src/javascript/script.js"></script>
+  <script src="/src/javascript/script.js"></script>
 </body>
 
 </html>
