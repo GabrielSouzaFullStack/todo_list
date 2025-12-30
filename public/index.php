@@ -13,7 +13,7 @@ $tasks = $taskController->obterTarefas();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To-Do-List</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="/src/style/style.css">
+  <link rel="stylesheet" href="../src/style/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
@@ -59,7 +59,7 @@ $tasks = $taskController->obterTarefas();
     </div>
   </div>
 
-  <script src="/src/javascript/script.js"></script>
+  <script src="../src/javascript/script.js"></script>
 </body>
 
 </html>
