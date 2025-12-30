@@ -13,6 +13,10 @@ class ComposerStaticInit995deb41b60052e4cd24a33cfab36423
     );
 
     public static $prefixLengthsPsr4 = array (
+        '\\' => 
+        array (
+            '\\ProjetoTodoList\\' => 17,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -22,10 +26,6 @@ class ComposerStaticInit995deb41b60052e4cd24a33cfab36423
         'P' => 
         array (
             'PhpOption\\' => 10,
-        ),
-        'M' => 
-        array (
-            'Marac\\ProjetoTodoList\\' => 22,
         ),
         'G' => 
         array (
@@ -38,6 +38,10 @@ class ComposerStaticInit995deb41b60052e4cd24a33cfab36423
     );
 
     public static $prefixDirsPsr4 = array (
+        '\\ProjetoTodoList\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
@@ -53,10 +57,6 @@ class ComposerStaticInit995deb41b60052e4cd24a33cfab36423
         'PhpOption\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
-        ),
-        'Marac\\ProjetoTodoList\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
         'GrahamCampbell\\ResultType\\' => 
         array (

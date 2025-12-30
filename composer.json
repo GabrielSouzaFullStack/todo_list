@@ -1,5 +1,5 @@
 {
-    "name": "/projeto-todo-list",
+    "name": "gabrielsouza/projeto-todo-list",
     "autoload": {
         "psr-4": {
             "\\ProjetoTodoList\\": "src/"
